@@ -22,13 +22,13 @@ export default class Slide {
         this.init();
     }
     hide(el) {
-        el.classList.remove('active');
+        el.classList.remove("active");
     }
     show(index) {
         this.index = index;
         this.slide = this.slides[this.index];
         this.slides.forEach((el) => this.hide(el));
-        this.slide.classList.add('active');
+        this.slide.classList.add("active");
         this.auto(this.time);
     }
     auto(time) {
@@ -49,28 +49,28 @@ export default class Slide {
     }
     pause() {
         this.pausedTimeout = new Timeout(() => {
+            this.timeout?.pause();
             this.paused = true;
         }, 300);
-        this.paused = true;
     }
     continue() {
-        this.pausedTimeout?.clear;
+        this.pausedTimeout?.clear();
         if (this.paused) {
             this.paused = false;
-            this.auto(this.time);
+            this.timeout?.continue();
         }
     }
     addControls() {
-        const prevButton = document.createElement('button');
-        const nextButton = document.createElement('button');
-        prevButton.innerText = 'Prev';
-        nextButton.innerText = 'Next';
+        const prevButton = document.createElement("button");
+        const nextButton = document.createElement("button");
+        prevButton.innerText = "Slide Anterior";
+        nextButton.innerText = "Próximo Slide";
         this.controls.appendChild(prevButton);
         this.controls.appendChild(nextButton);
-        this.controls.addEventListener('pointerdown', () => this.pause());
-        this.controls.addEventListener('pointerup', () => this.continue());
-        prevButton.addEventListener('pointerup', () => this.prev());
-        nextButton.addEventListener('pointerup', () => this.next());
+        this.controls.addEventListener("pointerdown", () => this.pause());
+        this.controls.addEventListener("pointerup", () => this.continue());
+        prevButton.addEventListener("pointerup", () => this.prev());
+        nextButton.addEventListener("pointerup", () => this.next());
     }
     init() {
         this.addControls();
