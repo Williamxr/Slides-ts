@@ -3,6 +3,12 @@ body {
   margin: 20px;
 }
 
+body.paused{
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 img,
 video {
   display: block;
