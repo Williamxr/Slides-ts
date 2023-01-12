@@ -87,6 +87,7 @@ export default class Slide {
     this.show(next);
   }
   pause() {
+    document.body.classList.add('paused');
     this.pausedTimeout = new Timeout(() => {
       this.timeout?.pause();
       this.paused = true;
@@ -95,6 +96,7 @@ export default class Slide {
     }, 300);
   }
   continue() {
+    document.body.classList.remove('paused');
     this.pausedTimeout?.clear();
     if (this.paused) {
       this.paused = false;
