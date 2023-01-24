@@ -40,6 +40,10 @@ h1 {
 
 #slide {
   display: grid;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 800px;
 }
 
 #slide-controls {
