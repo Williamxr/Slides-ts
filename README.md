@@ -5,3 +5,9 @@
 📚 O objetivo do projeto é por em prática tudo que foi aprendido durante o curso
 
 🔎 Assuntos abordados no curso:
+
+- Data Types
+
+- Interfaces
+
+- Type Guard
