@@ -11,3 +11,9 @@
 - Interfaces
 
 - Type Guard
+
+- Generics
+
+- Classes
+
+- Tuples
