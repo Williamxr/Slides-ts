@@ -17,3 +17,7 @@
 - Classes
 
 - Tuples
+
+- Objetos
+
+- TSConfig
