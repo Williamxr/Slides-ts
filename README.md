@@ -7,17 +7,10 @@
 🔎 Assuntos abordados no curso:
 
 - Data Types
-
 - Interfaces
-
 - Type Guard
-
 - Generics
-
 - Classes
-
 - Tuples
-
 - Objetos
-
 - TSConfig
